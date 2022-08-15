@@ -1,0 +1,24 @@
+public class Guerreiro extends Personagem{
+
+    public Guerreiro(GuerreiroBuilder guerreiroBuilder) {
+        this.nome = guerreiroBuilder.nome;
+        this.tipo = guerreiroBuilder.tipo;
+        this.forca = guerreiroBuilder.forca;
+        this.vigor = guerreiroBuilder.vigor;
+        this.destreza = guerreiroBuilder.destreza;
+        this.inteligencia = guerreiroBuilder.inteligencia;
+        this.resistencia = guerreiroBuilder.resistencia;
+    }
+
+    public Guerreiro(String nome, int inteligencia, int forca, int vigor, int resistencia, int destreza) throws Exception {
+        super(nome, TipoPersonagem.GUERREIRO, inteligencia, forca, vigor, resistencia, destreza);
+        if(forca<inteligencia || forca<destreza) {
+            throw new Exception("Atributos invalidos para GUERREIRO");
+        }
+    }
+
+    @Override
+    public double getDanoAtaque() {
+        return (forca * 0.8) + (vigor * 0.05) + (destreza * 0.1) + (inteligencia * 0.05);
+    }
+}
