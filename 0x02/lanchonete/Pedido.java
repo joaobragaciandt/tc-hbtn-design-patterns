@@ -21,16 +21,16 @@ public class Pedido {
 
     @Override
     public String toString() {
-        String strDentroCaixa = "Fora da caixa:\n";
-        String strForaCaixa = "Dentro da caixa:\n";
+        String strForaCaixa = "\tFora da Caixa:\n";
+        String strDentroCaixa = "\tDentro da Caixa:\n";
         for (ItemPedido i : itensForaCaixa) {
-            String novaStr = " - " + i.getTipo() + " " + i.getNome() + "\n";
+            String novaStr = "\t\t- " + i.getTipo() + " " + i.getNome() + "\n";
             strForaCaixa = strForaCaixa.concat(novaStr);
         }
         Iterator<ItemPedido> itr = itensDentroCaixa.iterator();
         while (itr.hasNext()) {
             ItemPedido i = itr.next();
-            String novaStr = " - " + i.getTipo() + " " + i.getNome() + "\n";
+            String novaStr = "\t\t- " + i.getTipo() + " " + i.getNome() + "\n";
             strDentroCaixa = strDentroCaixa.concat(novaStr);
         }
 
