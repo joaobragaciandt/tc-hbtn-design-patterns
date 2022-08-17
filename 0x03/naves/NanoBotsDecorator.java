@@ -5,6 +5,6 @@ public class NanoBotsDecorator extends NaveEspacialDecorator{
 
     @Override
     public int getAtaque() {
-        return super.naveEspacial.getAtaque() + 25;
+        return super.naveDecorada.getAtaque() + 25;
     }
 }

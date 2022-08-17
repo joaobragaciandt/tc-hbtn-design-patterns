@@ -4,6 +4,6 @@ public class LaserDecorator extends NaveEspacialDecorator{
     }
     @Override
     public int getAtaque() {
-        return super.naveEspacial.getAtaque() + 40;
+        return super.naveDecorada.getAtaque() + 40;
     }
 }

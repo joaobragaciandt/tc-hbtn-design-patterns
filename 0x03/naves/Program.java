@@ -1,5 +1,9 @@
+import java.util.Locale;
+
 public class Program {
     public static void main(String[] args) {
+        Locale.setDefault(new Locale("pt", "BR"));
+
         NaveEspacial naveEspacial = new NaveEspacial(100, 50);
         System.out.println(naveEspacial);
 

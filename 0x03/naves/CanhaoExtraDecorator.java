@@ -5,6 +5,6 @@ public class CanhaoExtraDecorator extends NaveEspacialDecorator{
 
     @Override
     public int getAtaque() {
-        return super.naveEspacial.getAtaque() + 75;
+        return super.naveDecorada.getAtaque() + 75;
     }
 }
